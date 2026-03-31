@@ -11,9 +11,9 @@ int bottomUpCutRod(int price[], int n)
         // j=1
         int q = INT_MIN;
         // q=-1
-        for (int i = 1; i <= j; i++)
+        for (int i=1;i<=j;i++)
         {
-            q = max(q, price[i] + r[j - i]);
+            q=max(q,price[i]+r[j - i]);
         }
         r[j] = q;
         // r[1]=1
@@ -24,7 +24,6 @@ int bottomUpCutRod(int price[], int n)
     // price[i] + r[j - i]
     // 3 2
     // 3 1 1
-
     // for r[i] + r[j - i]
     //  3 2
     //  1 1 1 2
@@ -37,10 +36,9 @@ int bottomUpCutRod(int price[], int n)
     //  1 2 2
     return r[n];
 }
-
 int main()
 {
-    int price[] = {0, 3, 5, 8, 9, 10, 17, 17, 20, 24, 30};
+    int price[]={0,3,5,8,9,10,17,17,20,24,30};
     int n = 10;
     cout << "Maximum Revenue = " << bottomUpCutRod(price, n);
     return 0;
