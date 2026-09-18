@@ -49,7 +49,6 @@ class Graph
         return false;
     }
 };
-// Shanto is a good boy
 int main(){
     Graph g(5);
     g.add(0,1);
